@@ -1,40 +1,62 @@
+/* Overall body styling for a centered layout with a complementary soft blue background */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #e6f0fa; /* Soft blue shade for a calming effect */
 }
 
+/* Styling for the calculator to make it stand out on the page with a subtle shadow for depth */
 .calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #b8d0e8; /* Softer shade for the border */
   padding: 20px;
   background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* subtle shadow for a 3D effect */
 }
 
+/* The display screen of the calculator, with enough padding and subtle border */
 #display {
   width: 200px;
   height: 40px;
-  border: 1px solid #ccc;
+  border: 1px solid #b8d0e8; /* Border color similar to the calculator's border for consistency */
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 10px;
   margin-bottom: 10px;
   font-size: 24px;
+  background-color: #f4faff; /* Very light blue background for the display for subtle contrast */
 }
 
+/* Grid layout for buttons with spacing for a clean look */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
+/* Button styling with complementary color for the calculator */
 button {
   width: 40px;
   height: 40px;
   font-size: 18px;
+  color: #fff; /* White text color for contrast */
+  background-color: #f2a65a; /* Soft orange for a pop of complementary color */
+  border: none; /* Remove border for a modern flat style */
+  border-radius: 5px; /* Slightly rounded corners for a friendly look */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s; /* Smooth background color transition for interactive feedback */
+}
+
+/* Interactive states for buttons */
+button:hover {
+  background-color: #ffbf80; /* Lighter orange shade on hover for visual feedback */
+}
+
+button:active {
+  background-color: #cc8c52; /* Darker orange when the button is clicked for a tactile feel */
 }
